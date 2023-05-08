@@ -1,0 +1,7 @@
+{
+    "mongoURI": "mongodb+srv://shivam-raj03:0987poiu@devcon.m4jvqkv.mongodb.net/?retryWrites=true&w=majority",
+    "myToken": "mysecrettoken",
+    "githubClientId": "1063470c7b3aacd51727",
+    "githubClientSecret": "d8b0e802b7ea0cc16c313285a93ae0ffe73ba563",
+    "githubToken": "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"
+}
