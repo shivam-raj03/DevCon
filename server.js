@@ -1,6 +1,7 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const cors = require("cors");
+const path = require('path');
 
 const app = express();
 
@@ -13,9 +14,9 @@ app.use(cors());
 
 
 //Listen to home route
-app.get("/", (req, res) =>{
-    res.send("API is Running");
-});
+// app.get("/", (req, res) =>{
+//     res.send("API is Running");
+// });
 
 // Define routes
 
@@ -25,6 +26,11 @@ app.use("/api/profile", require("./routes/api/profile"));
 app.use("/api/posts", require("./routes/api/posts"));
 
 
+app.use(express.static(path.join(__dirname, './client/build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
+});
 
 
 
