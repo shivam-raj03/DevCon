@@ -1,7 +1,7 @@
 {
     "mongoURI": "mongodb+srv://shivam-raj03:0987poiu@devcon.m4jvqkv.mongodb.net/?retryWrites=true&w=majority",
     "myToken": "mysecrettoken",
-    "githubClientId": "1063470c7b3aacd51727",
-    "githubClientSecret": "d8b0e802b7ea0cc16c313285a93ae0ffe73ba563",
-    "githubToken": "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"
+    "githubClientId": "8cc71a2df622a1764e24",
+    "githubClientSecret": "49b29bd71b1f5f6673012936a299d901dadf0c54",
+    "githubToken": "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"
 }

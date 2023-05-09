@@ -9,7 +9,6 @@ const Navbar = () => {
   //console.log(isAuthenticated);
   const dispatch = useDispatch();
   const onClick = () =>{
-    console.log('Hello! I am in onclick function')
     dispatch(logout());
   } 
 

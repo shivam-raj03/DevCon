@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import axios from '../http';
 import {setAlert} from './alert';
-import { CLEAR_PROFILE, DELETE_ACCOUNT, GET_PROFILE, PROFILE_ERROR , UPDATE_PROFILE, GET_PROFILES} from './types';
+import { CLEAR_PROFILE, DELETE_ACCOUNT, GET_PROFILE, PROFILE_ERROR , UPDATE_PROFILE, GET_PROFILES, GET_REPOS} from './types';
 import { useNavigate} from 'react-router-dom';
 
 //Get current user profile
@@ -67,13 +67,12 @@ export const getProfileById = (userId) => async dispatch =>{
 export const getGithubRepos = (userName) => async dispatch =>{
     try {
         const res = await axios.get(`api/profile/github/${userName}`);
-        
         dispatch({
             type: GET_REPOS,
             payload: res.data
         });
     } catch (err) {
-        
+        //console.log(err);
         dispatch({
             type: PROFILE_ERROR,    
             payload: {msg: err.response.statusText, status: err.response.status}

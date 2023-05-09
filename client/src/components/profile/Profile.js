@@ -47,7 +47,7 @@ const Profile = () => {
                     ) : (<h4>No Education Credentials</h4>)}
                 </div>
                 {profile.githubusername && (
-                    <ProfileGithub username={profile.githubusername} />
+                    <ProfileGithub key={1} username={profile.githubusername} />
                 )}
             </div>
         </Fragment>}
